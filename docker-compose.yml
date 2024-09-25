@@ -1,0 +1,16 @@
+﻿services:
+  zakaz:
+    image: university
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:8080"
+    
+  Database:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: Database
+      POSTGRES_USER: User
+      POSTGRES_PASSWORD: qwe123asd
+    
